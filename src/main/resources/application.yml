@@ -1,0 +1,41 @@
+server:
+  port: ${PORT:8085}
+
+jobs:
+  default-schedule: "1 * * * * ?"
+
+  friends:
+    active: false
+    path: "datasources/fakefriends.csv"
+
+  weather:
+    active: false
+    path: "datasources/1800.csv"
+    filter-type: TMAX #TMIN
+
+  wordcount:
+    simple-wordcount:
+      active: false
+      path: "datasources/book.txt"
+
+  financial:
+    order-processing:
+      active: false
+      path: "datasources/customer-orders.csv"
+
+  movie:
+    most-popular-movie:
+      active: false
+      path: "datasources/movies/ratings.csv"
+    most-rated-movie:
+      active: false
+      path: "datasources/movies/ratings.csv"
+
+  superheroes:
+    most-popular-hero:
+      active: true
+      main-data-path: "datasources/Marvel-graph.txt"
+      additional-data-path: "datasources/Marvel-names.txt"
+
+logging:
+  file: application.log
