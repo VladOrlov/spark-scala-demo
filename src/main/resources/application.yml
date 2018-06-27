@@ -30,12 +30,29 @@ jobs:
     most-rated-movie:
       active: false
       path: "datasources/movies/ratings.csv"
+    movie-similarities:
+      active: false
+      path: "datasources/movies/ratings.csv"
+      score-threshold: 0.97
+      coOccurence-threshold: 50.0
+      similitude-movie: 50
 
   superheroes:
     most-popular-hero:
-      active: true
+      active: false
       main-data-path: "datasources/Marvel-graph.txt"
       additional-data-path: "datasources/Marvel-names.txt"
+
+dfjobs:
+  city:
+    active: false
+    path: "datasources/df/CitiGroup2006_2008"
+  sales:
+    active: false
+    path: "datasources/df/Sales.csv"
+  netflix:
+    active: true
+    path: "datasources/df/Netflix_2011_2016.csv"
 
 logging:
   file: application.log
